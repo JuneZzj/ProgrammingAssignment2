@@ -3,6 +3,14 @@
 
 ## Write a short comment describing this function
 
+## The makeCacheMatrix function creates a list that has 4 functions:
+## get: A function which shows the matrix
+## set: set value of another matrix 
+## getinverse: get the inverse value of the matrix
+## setinverse: set the inverse value of the matrix
+
+## m stores the value of inverse of matrix
+
 makeCacheMatrix <- function(x = matrix()) {
         m <- NULL
         set <- function(y) {
@@ -10,7 +18,7 @@ makeCacheMatrix <- function(x = matrix()) {
                 m <<- NULL
         }
         get <- function() x
-        setinverse <- function() m <<- solve
+        setinverse <- function(inverse) m <<- inverse
         getinverse <- function() m
         list(set = set, get = get,
              setinverse = setinverse,
